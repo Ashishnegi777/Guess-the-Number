@@ -6,9 +6,19 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root{
+    --blue-shade: #175DCD;;
+    --blue: #3C6FFF;
+    --red: #FFCBCE;
+    --green:#B8FFD5;
+
+    --G-ocean: #00B4DB;
+    --G-breeze: #0083B0;
+
+}
 @font-face {
     font-family: anek;
-    src: url(AnekGurmukhi-Medium.ttf);
+    src: url(/assets/AnekGurmukhi-Medium.ttf);
 }
 input,input::placeholder{
     opacity: 50%;
