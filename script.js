@@ -72,3 +72,22 @@ function() {
 
    
 });
+
+document.querySelector('.reset').addEventListener('click',
+function(){
+    score = 5;
+    document.querySelector('.id').textContent = score;
+
+    document.querySelector('.input').value = '';
+    guess = Math.trunc(Math.random() * 20 +1);
+    document.querySelector('.number').textContent = guess; 
+    bg('#3C6FFF');
+    document.querySelector('body').style.backgroundColor = '#f2f8fc '
+    Content.textContent = 'Guess The Number.'
+    trywin('meow..')
+    document.querySelector('.number').textContent = '?';
+    aura('black');
+    Content.textContent = 'Guess The Number.';
+    gid.textContent = 'I am thinking of a number between 1-20.';
+    gp.textContent = 'Can you Guess it?'    
+});
