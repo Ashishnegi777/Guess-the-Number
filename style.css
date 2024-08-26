@@ -6,3 +6,167 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root{
+    --blue-shade: #175DCD;;
+    --blue: #3C6FFF;
+    --red: #FFCBCE;
+    --green:#B8FFD5;
+
+    --G-ocean: #00B4DB;
+    --G-breeze: #0083B0;
+
+}
+@font-face {
+    font-family: anek;
+    src: url(/assets/AnekGurmukhi-Medium.ttf);
+}
+input,input::placeholder{
+    opacity: 50%;
+    font-weight: 600;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+body{
+    background-color: #f2f8fc;
+    font-family: anek;
+    position: relative;
+    /* background-image: linear-gradient( #E0EAF3 , #CFDEF3); */
+}
+.one{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+.img img{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.img{
+    display: none;
+    animation: opacity .5s ease-in-out;
+    
+}
+
+@keyframes opacity {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+    
+}
+
+.title{
+    font-size: 2.25rem;
+    color: black;
+    font-family: "Poppins", sans-serif;
+
+}
+.pera{
+    font-family: "Poppins", sans-serif;
+    font-size: .85rem;
+}
+.score {
+    display: flex;
+    align-items: center;
+    padding-top: 0.25rem;
+    justify-content: center;
+    gap: 0.25rem;
+    background-color: #3C6FFF;
+    
+    width: 8.75rem;
+    height: 2.25rem;
+    border-radius: 0.25rem;
+    color: #fefefe;
+    
+    
+}
+.scoree{
+    font-size: 1.25rem;
+    letter-spacing: 0.02rem;
+}
+.score>span{
+    font-size: 1.25rem;
+}
+.input{
+    height: 1.75rem;
+    width: 40%;
+    border-radius: 0.25rem;
+    
+}
+
+.btn{
+    width: fit-content;
+    border: 0;
+    background-color: var(--blue);
+    width: 4.75rem;
+    height: 1.75rem;
+    border-radius: 0.25rem;
+    color: #fefefe;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+.warp{
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.try-win{
+    width: 12.25rem;
+    height: 5%;
+    border: 1.5px solid var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    color: black;
+    padding-top: 0.2rem;
+    
+}
+input[type=text]{
+    padding: 5px 5px;
+    border-radius: 0.25rem;
+   
+}
+input[type=text]:focus{
+    background-color: #0e318f4e;
+    color: white;
+}
+
+.try-win:hover{
+    background-color: var(--blue);
+    transition: all 0.5s ease-in-out;
+    color: #fefefe;
+}
+
+.reset{
+    width: fit-content;
+    height: 4%;
+    padding: 0.75rem;
+    background-color: #3C6FFF;
+    border-radius: 0.25rem;
+    color: #fefefe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.rr{
+    padding-top: 0.25rem;
+}
