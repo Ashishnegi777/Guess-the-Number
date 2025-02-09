@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
 
 *{
@@ -6,8 +5,17 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root{
+    --blue-shade: #175DCD;;
+    --blue: #3C6FFF;
+    --red: #FFCBCE;
+    --green:#B8FFD5;
 
+    --G-ocean: #00B4DB;
+    --G-breeze: #0083B0;
 
+}
+  
 @font-face {
     font-family: anek;
     src: url(AnekGurmukhi-Medium.ttf);
@@ -161,4 +169,50 @@ input[type=text]:focus{
 }
 .rr{
     padding-top: 0.25rem;
+}
+
+.model-waper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-90px, -52px);
+}
+.model-waper{
+    background-color: var(--blue-shade);
+    padding: 2.75rem 4rem;
+    color: var(--marble);
+    border-radius: 0.25rem;
+    animation: anime .4s ease-in-out;
+    color: #f2f8fc;
+}
+#close-btn{
+    position: absolute;
+    top: 10%;
+    right: 8%;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+.model-waper{
+    display: none;
+}
+
+@keyframes anime {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    } 
+}
+
+.vid{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+}
+.vid{
+    display: none;
+    object-fit: cover;
 }
