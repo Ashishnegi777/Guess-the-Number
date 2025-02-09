@@ -30,29 +30,29 @@ const aura = function(fColor){
 }
 
 
-document.querySelector('.btn').addEventListener('click',
-function() {
-   
+
+function generator() {
+    
     const number = Number(document.querySelector('.input').value);
     console.log(number,guess)
-
+    
     // this fun will count NO of clicks
     clickCount();
     function clickCount(){
         count++;
-            if(count === 1 && number === guess){
+        if(count === 1 && number === guess){
                 document.querySelector('.img').style.display = 'block';
                 Content.textContent = 'Aura++';
                 aura('white');
                 gid.textContent = 'Thus the world was created'
                 gp.textContent = '?'               
             }
-        console.log(count);
-    }
+            console.log(count);
+        }
     
-
+        
     
-    if(!number){
+        if(!number){
         trywin('Please enter a number');
     }
     
@@ -62,24 +62,24 @@ function() {
         console.log(number);
         score++;
         scoree(score);
-
-    document.querySelector('body').style.backgroundColor = '#B8FFD5'
-    bg('#1f8c4c');
-   }
-
-   else if (number !== guess){
-
-       if(score> 1){
-       document.querySelector('.try-win').textContent = guess < number ? 
-       'Too high' : 'To low';
+        
+        document.querySelector('body').style.backgroundColor = '#B8FFD5'
+        bg('#1f8c4c');
+    }
     
-       score--;
-       scoree(score);
-       bg('#FFCBCE');
-       document.querySelector('.try-win').style.borderColor = '#FFCBCE'
-       }
-    
-       else{
+    else if (number !== guess){
+        
+        if(score> 1){
+            document.querySelector('.try-win').textContent = guess < number ? 
+            'Too high' : 'To low';
+            
+            score--;
+            scoree(score);
+            bg('#FFCBCE');
+            document.querySelector('.try-win').style.borderColor = '#FFCBCE'
+        }
+        
+        else{
             Content.textContent = 'You lose!!'
             document.querySelector('.number').textContent = guess;
             video.style.display = 'block'
@@ -92,14 +92,19 @@ function() {
             gp.innerText = 'Can\'t even guess that number.'
         }
     }
-
+    
     closeBtn.addEventListener('click', function(){
-    modelWaper.style.display = 'none'
+        modelWaper.style.display = 'none'
     });
+}
 
 
-
-
+document.querySelector('.btn').addEventListener('click',
+    generator()
+);
+window.addEventListener('keypress', (e)=>{
+    if(e.key === "Enter")
+    generator();
 });
 
 // reset
