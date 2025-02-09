@@ -18,7 +18,7 @@
   
 @font-face {
     font-family: anek;
-    src: url(AnekGurmukhi-Medium.ttf);
+    src: url(assets/AnekGurmukhi-Medium.ttf);
 }
 input,input::placeholder{
     opacity: 50%;
